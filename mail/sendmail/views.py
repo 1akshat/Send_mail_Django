@@ -13,7 +13,7 @@ def sendmail(request):
 	      	subject = form.cleaned_data['subject']
 	      	message = form.cleaned_data['message']
 	    	try:
-	    		send_mail('subject', 'message', 'akshat.akshat6@gmail.com', ['akshatuppal1@gmail.com'])
+	    		send_mail('subject', 'message', '<SENDER EMAIL ID>', ['<RECEIVER EMAIL ID"S>'])
 	      		return HttpResponseRedirect('/email/thankyou/')
 	    	except Exception, e:
 	      		return HttpResponse('Except Block executed.' + str(e))
